@@ -12,6 +12,9 @@
       --card:#0b1220;
       --muted:#94a3b8;
       --accent:#10b981;
+      --accent2:#3b82f6;
+      --accent3:#f59e0b;
+      --accent4:#ef4444;
       --text:#e6eef8;
       --glass: rgba(255,255,255,0.03);
       --max-w:1100px;
@@ -43,6 +46,7 @@
       border-radius:50%;
       object-fit:cover;
       margin-bottom:12px;
+      box-shadow:0 0 12px rgba(16,185,129,0.5);
     }
     @media(max-width:700px){
       .profile img{width:120px;height:120px}
@@ -57,6 +61,28 @@
     .card h3{margin:0 0 6px 0;font-size:16px}
     .card p{margin:0;color:var(--muted);font-size:14px}
     .card .meta{margin-top:10px;font-size:13px;color:var(--muted)}
+
+    /* Skills animation */
+    .skills-grid{display:flex;flex-wrap:wrap;gap:12px}
+    .skill{
+      flex:1 1 auto;
+      padding:10px 16px;
+      border-radius:20px;
+      color:#fff;
+      font-weight:600;
+      font-size:14px;
+      animation:pulse 3s infinite;
+    }
+    .skill.html{background:var(--accent)}
+    .skill.css{background:var(--accent2)}
+    .skill.js{background:var(--accent3)}
+    .skill.linux{background:var(--accent4)}
+
+    @keyframes pulse {
+      0%{transform:scale(1)}
+      50%{transform:scale(1.08)}
+      100%{transform:scale(1)}
+    }
 
     footer{margin:28px 0;padding:14px 0;color:var(--muted);text-align:center}
   </style>
@@ -101,13 +127,32 @@
 
     <section id="projects">
       <h2>Projects</h2>
-      <div class="grid projects-grid" id="projectsGrid"></div>
+      <div class="grid projects-grid">
+        <div class="card">
+          <h3>TryHackMe — Brute It</h3>
+          <p>Enumeration, brute force, and privilege escalation in Linux environment.</p>
+          <div class="meta">Tools: Hydra, Linux</div>
+        </div>
+        <div class="card">
+          <h3>Blood Donor Finder App (Concept)</h3>
+          <p>Planned app to connect donors and seekers based on blood group and location.</p>
+          <div class="meta">Tech: HTML, JS, Firebase</div>
+        </div>
+        <div class="card">
+          <h3>Personal Portfolio</h3>
+          <p>This site itself, built and hosted on GitHub Pages with custom styling and animations.</p>
+          <div class="meta">Tech: HTML, CSS</div>
+        </div>
+      </div>
     </section>
 
     <section id="skills">
       <h2>Skills</h2>
-      <div class="card">
-        <p>HTML, CSS, JavaScript, Linux/Kali</p>
+      <div class="skills-grid">
+        <div class="skill html">HTML</div>
+        <div class="skill css">CSS</div>
+        <div class="skill js">JavaScript</div>
+        <div class="skill linux">Linux / Kali</div>
       </div>
     </section>
 
