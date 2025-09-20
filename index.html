@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>ANANTHA NARAYANAN R — Portfolio</title>
   <meta name="description" content="Portfolio / Projects / Skills" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     :root{
@@ -62,6 +63,7 @@
 
     /* What I Know section */
     .know-section{display:grid;gap:24px}
+    .know-category{padding:16px;border:1px solid var(--glass);border-radius:var(--rounded);background:rgba(255,255,255,0.02)}
     .know-category h3{margin:0 0 8px 0;font-size:16px;color:var(--accent)}
     .know-category .options{display:flex;flex-wrap:wrap;gap:8px}
     .option{
@@ -76,6 +78,21 @@
       color:var(--text);
       font-weight:600;
     }
+
+    /* Social icons */
+    .social-links a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:36px;
+      height:36px;
+      border-radius:50%;
+      background:var(--glass);
+      color:var(--text);
+      font-size:16px;
+      transition:0.3s;
+    }
+    .social-links a:hover{background:var(--highlight);}
 
     footer{margin:28px 0;padding:14px 0;color:var(--muted);text-align:center}
   </style>
@@ -110,11 +127,11 @@
         <img src="09.jpg" alt="Profile Photo">
         <div style="font-weight:700">Anantha Narayanan R</div>
         <div class="muted">Aspiring vulnerability analyst • ADIS student</div>
-        <div style="margin-top:12px;display:flex;justify-content:center;gap:8px">
-          <a title="GitHub" href="https://github.com/evertrustai" target="_blank">GitHub</a>
-          <a title="LinkedIn" href="https://linkedin.com/in/ananthanrayananr2004" target="_blank">LinkedIn</a>
-          <a title="Instagram" href="https://instagram.com/evertrustai" target="_blank">Instagram</a>
-          <a title="Email" href="mailto:ananthanpkd2001@gmail.com">Email</a>
+        <div class="social-links" style="margin-top:12px;display:flex;justify-content:center;gap:10px">
+          <a title="GitHub" href="https://github.com/evertrustai" target="_blank"><i class="fab fa-github"></i></a>
+          <a title="LinkedIn" href="https://linkedin.com/in/ananthanrayananr2004" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a title="Instagram" href="https://instagram.com/evertrustai" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a title="Email" href="mailto:ananthanpkd2001@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
       </aside>
     </section>
