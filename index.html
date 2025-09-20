@@ -62,28 +62,11 @@
     .card p{margin:0;color:var(--muted);font-size:14px}
     .card .meta{margin-top:10px;font-size:13px;color:var(--muted)}
 
-    /* Skills animation */
-    .skills-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-    .skill{
-      padding:14px;
-      border-radius:12px;
-      color:#fff;
-      font-weight:600;
-      font-size:14px;
-      animation:pulse 3s infinite;
-    }
-    .skill h3{margin:0 0 8px 0;font-size:16px}
-    .skill ul{margin:0;padding-left:18px;font-size:14px;color:#f3f4f6}
-
-    .offensive{background:linear-gradient(135deg,var(--accent4),#f87171)}
-    .defensive{background:linear-gradient(135deg,var(--accent2),#60a5fa)}
-    .frontend{background:linear-gradient(135deg,var(--accent3),#fcd34d)}
-
-    @keyframes pulse {
-      0%{transform:scale(1)}
-      50%{transform:scale(1.05)}
-      100%{transform:scale(1)}
-    }
+    /* What I Know section */
+    .know-section{display:grid;gap:24px}
+    .know-category h3{margin:0 0 8px 0;font-size:16px;color:var(--accent)}
+    .know-category ul{margin:0;padding-left:18px;color:var(--muted)}
+    .know-category ul li{margin:4px 0}
 
     footer{margin:28px 0;padding:14px 0;color:var(--muted);text-align:center}
   </style>
@@ -150,29 +133,28 @@
 
     <section id="skills">
       <h2>What I Know</h2>
-      <div class="skills-grid">
-        <div class="skill offensive">
+      <div class="know-section">
+        <div class="know-category">
           <h3>Offensive Security</h3>
           <ul>
-            <li>Enumeration (Nmap, Enum4linux)</li>
-            <li>Password Attacks (Hydra, John)</li>
-            <li>Exploitation basics (Metasploit, CTFs)</li>
+            <li>Bug Bounty</li>
+            <li>Exploitation</li>
+            <li>nmap</li>
           </ul>
         </div>
-        <div class="skill defensive">
+        <div class="know-category">
           <h3>Defensive Security</h3>
           <ul>
-            <li>Log Analysis</li>
-            <li>SIEM Basics (Wazuh)</li>
-            <li>Network Monitoring</li>
+            <li>SOC</li>
+            <li>SIEM</li>
           </ul>
         </div>
-        <div class="skill frontend">
+        <div class="know-category">
           <h3>Frontend</h3>
           <ul>
-            <li>HTML & CSS</li>
-            <li>JavaScript Basics</li>
-            <li>Responsive Design</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
           </ul>
         </div>
       </div>
