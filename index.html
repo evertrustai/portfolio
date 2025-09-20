@@ -12,9 +12,7 @@
       --card:#0b1220;
       --muted:#94a3b8;
       --accent:#10b981;
-      --accent2:#3b82f6;
-      --accent3:#f59e0b;
-      --accent4:#ef4444;
+      --highlight:rgba(16,185,129,0.2);
       --text:#e6eef8;
       --glass: rgba(255,255,255,0.03);
       --max-w:1100px;
@@ -65,8 +63,19 @@
     /* What I Know section */
     .know-section{display:grid;gap:24px}
     .know-category h3{margin:0 0 8px 0;font-size:16px;color:var(--accent)}
-    .know-category ul{margin:0;padding-left:18px;color:var(--muted)}
-    .know-category ul li{margin:4px 0}
+    .know-category .options{display:flex;flex-wrap:wrap;gap:8px}
+    .option{
+      padding:6px 12px;
+      border-radius:8px;
+      background:var(--glass);
+      font-size:14px;
+      color:var(--muted);
+    }
+    .option.know{
+      background:var(--highlight);
+      color:var(--text);
+      font-weight:600;
+    }
 
     footer{margin:28px 0;padding:14px 0;color:var(--muted);text-align:center}
   </style>
@@ -136,26 +145,33 @@
       <div class="know-section">
         <div class="know-category">
           <h3>Offensive Security</h3>
-          <ul>
-            <li>Bug Bounty</li>
-            <li>Exploitation</li>
-            <li>nmap</li>
-          </ul>
+          <div class="options">
+            <div class="option know">Bug Bounty</div>
+            <div class="option know">Exploitation</div>
+            <div class="option">Wireless Hacking</div>
+            <div class="option know">nmap</div>
+            <div class="option know">VAPT</div>
+          </div>
         </div>
         <div class="know-category">
           <h3>Defensive Security</h3>
-          <ul>
-            <li>SOC</li>
-            <li>SIEM</li>
-          </ul>
+          <div class="options">
+            <div class="option know">SOC</div>
+            <div class="option know">SIEM</div>
+            <div class="option">Threat Hunting</div>
+            <div class="option">Incident Response</div>
+            <div class="option">Malware Analysis</div>
+          </div>
         </div>
         <div class="know-category">
           <h3>Frontend</h3>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-          </ul>
+          <div class="options">
+            <div class="option know">HTML</div>
+            <div class="option know">CSS</div>
+            <div class="option know">JavaScript</div>
+            <div class="option">React</div>
+            <div class="option">Bootstrap</div>
+          </div>
         </div>
       </div>
     </section>
