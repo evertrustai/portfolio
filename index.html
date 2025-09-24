@@ -1,222 +1,744 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>ANANTHA NARAYANAN R — Portfolio</title>
-  <meta name="description" content="Portfolio / Projects / Skills" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Vishnu Hidesh</title>
+    <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
 
-  <style>
-    :root{
-      --bg:#0f1724;
-      --card:#0b1220;
-      --muted:#94a3b8;
-      --accent:#10b981;
-      --highlight:rgba(16,185,129,0.2);
-      --text:#e6eef8;
-      --glass: rgba(255,255,255,0.03);
-      --max-w:1100px;
-      --rounded:12px;
-      font-family: Inter, ui-sans-serif, system-ui;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#071023);color:var(--text);scroll-behavior:smooth;}
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:var(--max-w);margin:24px auto;padding:20px}
-
-    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-    .brand{display:flex;gap:12px;align-items:center}
-    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:700;color:#001}
-    nav{display:flex;gap:12px;align-items:center}
-    nav a{padding:6px 10px;border-radius:8px;font-size:14px;color:var(--muted)}
-    nav a:hover{background:var(--glass);color:var(--text)}
-
-    .burger{display:none;cursor:pointer}
-    @media(max-width:820px){nav{display:none}.burger{display:block}}
-
-    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;margin-top:20px}
-    .hero-card{background:rgba(255,255,255,0.02);padding:28px;border-radius:var(--rounded)}
-
-    .profile{padding:18px;border-radius:var(--rounded);background:rgba(255,255,255,0.02);text-align:center}
-    .profile img{
-      width:160px;
-      height:160px;
-      border-radius:50%;
-      object-fit:cover;
-      margin-bottom:12px;
-      box-shadow:0 0 12px rgba(16,185,129,0.5);
-    }
-    @media(max-width:700px){
-      .profile img{width:120px;height:120px}
-    }
-
-    section{margin-top:28px}
-    h2{font-size:18px;margin:0 0 12px 0}
-    .grid{display:grid;gap:12px}
-
-    .projects-grid{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
-    .card{background:var(--card);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
-    .card h3{margin:0 0 6px 0;font-size:16px}
-    .card p{margin:0;color:var(--muted);font-size:14px}
-    .card .meta{margin-top:10px;font-size:13px;color:var(--muted)}
-
-    /* What I Know section */
-    .know-section{display:grid;gap:24px}
-    .know-category{padding:16px;border:1px solid var(--glass);border-radius:var(--rounded);background:rgba(255,255,255,0.02)}
-    .know-category h3{margin:0 0 8px 0;font-size:16px;color:var(--accent)}
-    .know-category .options{display:flex;flex-wrap:wrap;gap:8px}
-    .option{
-      padding:6px 12px;
-      border-radius:8px;
-      background:var(--glass);
-      font-size:14px;
-      color:var(--muted);
-    }
-    .option.know{
-      background:var(--highlight);
-      color:var(--text);
-      font-weight:600;
-    }
-
-    /* Social icons */
-    .social-links a{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width:36px;
-      height:36px;
-      border-radius:50%;
-      background:var(--glass);
-      color:var(--text);
-      font-size:16px;
-      transition:0.3s;
-    }
-    .social-links a:hover{background:var(--highlight);}
-
-    footer{margin:28px 0;padding:14px 0;color:var(--muted);text-align:center}
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="logo">YT</div>
-        <div>
-          <div style="font-weight:700">ANANTHA NARAYANAN R</div>
-          <div class="muted" style="font-size:13px">Vulnerability Analyst • ADIS Student</div>
-        </div>
-      </div>
-      <nav id="mainNav">
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">What I Know</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendors/jvectormap/jquery-jvectormap.css">
+    <link rel="stylesheet" href="assets/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="assets/vendors/owl-carousel-2/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/vendors/owl-carousel-2/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+  </head>
+  <body>
+    <div class="container-scroller">
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item profile">
+            
+          </li>
+          <li class="nav-item nav-category">
+            <span class="nav-link">Navigation</span>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="index.html">
+              <span class="menu-icon">
+                <i class="mdi mdi-speedometer"></i>
+              </span>
+              <span class="menu-title">Home</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="https://github.com/vishnuhidesh">
+              <span class="menu-icon">
+                <i class="fa fa-github"></i>
+              </span>
+              <span class="menu-title">GitHub</span>
+              
+            </a>
+            
+          </li>
+          
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="https://stackoverflow.com/users/21788395/vishnu-hidesh">
+              <span class="menu-icon">
+                <i class="mdi mdi-stack-overflow"></i>
+              </span>
+              <span class="menu-title">Stack Overflow</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="https://www.linkedin.com/in/vishnu-hidesh-906033239/">
+              <span class="menu-icon">
+                <i class="mdi mdi-linkedin"></i>
+              </span>
+              <span class="menu-title">LinkedIn</span>
+            </a>
+          </li>
+          
+          
+        </ul>
       </nav>
-      <div class="burger" id="burger" aria-hidden="true">☰</div>
-    </header>
-
-    <section id="home" class="hero">
-      <div class="hero-card">
-        <p class="muted">Hi! I’m</p>
-        <h1 class="name">Anantha Narayanan R</h1>
-        <div class="tag">Building useful things — web apps, small open-source tools, and automations.</div>
-      </div>
-      <aside class="profile">
-        <img src="09.jpg" alt="Profile Photo">
-        <div style="font-weight:700">Anantha Narayanan R</div>
-        <div class="muted">Aspiring vulnerability analyst • ADIS student</div>
-        <div class="social-links" style="margin-top:12px;display:flex;justify-content:center;gap:10px">
-          <a title="GitHub" href="https://github.com/evertrustai" target="_blank"><i class="fab fa-github"></i></a>
-          <a title="LinkedIn" href="https://linkedin.com/in/ananthanrayananr2004" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a title="Instagram" href="https://instagram.com/evertrustai" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a title="Email" href="mailto:ananthanpkd2001@gmail.com"><i class="fas fa-envelope"></i></a>
-        </div>
-      </aside>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="grid projects-grid">
-        <div class="card">
-          <h3>GutHub - Hash-ID Helper</h3>
-          <p>Smart Hash Identifier & Cracker Assistant</p>
-          <div class="meta"><a href="https://github.com/evertrustai/hash-id-helper" target="_blank">View Tool</a></div>
-        </div>
-        <div class="card">
-          <h3>Blood Donor Finder App (Concept)</h3>
-          <p>Planned app to connect donors and seekers based on blood group and location.</p>
-          <div class="meta">Tech: HTML, JS, Firebase</div>
-        </div>
-        <div class="card">
-          <h3>TryHackMe — Hash Hunt</h3>
-          <p>Room walkthrough focusing on password cracking and hash analysis.</p>
-          <div class="meta"><a href="https://tryhackme.com/jr/hashhunt" target="_blank">View Room</a></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <h2>What I Know</h2>
-      <div class="know-section">
-        <div class="know-category">
-          <h3>Offensive Security</h3>
-          <div class="options">
-            <div class="option know">Bug Bounty</div>
-            <div class="option know">Exploitation</div>
-            <div class="option">Wireless Hacking</div>
-            <div class="option know">nmap</div>
-            <div class="option know">VAPT</div>
+      <div class="container-fluid page-body-wrapper">
+        <nav class="navbar p-0 fixed-top d-flex flex-row">
+          <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
           </div>
-        </div>
-        <div class="know-category">
-          <h3>Defensive Security</h3>
-          <div class="options">
-            <div class="option know">SOC</div>
-            <div class="option know">SIEM</div>
-            <div class="option">Threat Hunting</div>
-            <div class="option">Incident Response</div>
-            <div class="option">Malware Analysis</div>
+          <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+              <span class="mdi mdi-menu"></span>
+            </button>
+            <ul class="navbar-nav w-100">
+              <li class="nav-item w-100">
+                
+              </li>
+            </ul>
+            <ul class="navbar-nav navbar-nav-right">
+              <li class="nav-item dropdown d-none d-lg-block">
+                <a class="nav-link btn btn-success create-new-button" href="#social"><span class="mdi mdi-account-plus mr-2"></span> Contact Me</a>
+                
+              </li>
+             
+              
+              
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+              <span class="mdi mdi-format-line-spacing"></span>
+            </button>
           </div>
-        </div>
-        <div class="know-category">
-          <h3>Frontend</h3>
-          <div class="options">
-            <div class="option know">HTML</div>
-            <div class="option know">CSS</div>
-            <div class="option know">JavaScript</div>
-            <div class="option">React</div>
-            <div class="option">Bootstrap</div>
+        </nav>
+        <div class="main-panel">
+          <div class="content-wrapper">
+            
+            <div class="row">
+              <div class="col-12 grid-margin stretch-card">
+                <div class="card corona-gradient-card profile-card">
+                  <img src="assets/images/dashboard/Group126@2x.png" class="gradient-corona-img rounded-circle mx-4" style="border: 4px solid white;" alt="">
+                  <h2 class="mb-1 mb-sm-0  vis">Vishnu Hidesh </h2>
+                  <span>
+                    <a href="https://www.instagram.com/vishnu_hidesh/" target="_blank" class="btn  btn-rounded get-started-btn insta mx-4">Follow on Instagram</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project">
+              <h3>Projects</h3>
+            </div>
+
+            <div class="row">
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h3 class="mb-0">FitFuel</h3>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <a href="https://github.com/vishnuhidesh/FitFuel-Final"><div class="icon icon-box-success ">
+                          <span class="mdi mdi-arrow-top-right icon-item"></span>
+                        </div></a>
+                      </div>
+                    </div>
+                    <h6 class="text-muted font-weight-normal">AI Fitness and Nutrition</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h3 class="mb-0">CTF Go</h3>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <a href="https://github.com/vishnuhidesh/ResultS5BCA"><div class="icon icon-box-success">
+                          <span class="mdi mdi-arrow-top-right icon-item"></span>
+                        </div></a>
+                      </div>
+                    </div>
+                    <h6 class="text-muted font-weight-normal">CTF Game</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h3 class="mb-0">Text Utils</h3>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <a href="https://github.com/vishnuhidesh/TextUtils"><div class="icon icon-box-success">
+                          <span class="mdi mdi-arrow-top-right icon-item"></span>
+                        </div></a>
+                      </div>
+                    </div>
+                    <h6 class="text-muted font-weight-normal">Daily Income</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h3 class="mb-0">EnCrypto</h3>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success ">
+                          <span class="mdi mdi-arrow-top-right icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <h6 class="text-muted font-weight-normal">Encryption Algorithm</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project">
+              <h3>What I Know</h3>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Offensive Security</h4>
+                    <div class="row">
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">VAPT</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">Wireless Hacking</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" style="border: 1px solid yellow;">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">Bug Bounty</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" >
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" style="border: 1px solid magenta;">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">Exploitation</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">Social Engineering</h6>
+                        </div>
+                      </div>
+                      <!-- <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1"></h6>
+                        </div>
+                      </div> -->
+                    </div>      
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Defensive Security</h4>
+                    <div class="row">
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">Network Defense</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">SOC</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" style="border: 1px solid yellow;">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">SIEM</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" >
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" style="border: 1px solid magenta;">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">Cloud Security</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">Endpoint Security</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">Malware Analysis</h6>
+                        </div>
+                      </div>
+                    </div>      
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Frontend</h4>
+                    <div class="row">
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">HTML</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">CSS</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" style="border: 1px solid yellow;">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">JavaScript</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" >
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" style="border: 1px solid magenta;">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">Bootstrap</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">React.Js</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">Tailwind CSS</h6>
+                        </div>
+                      </div>
+                    </div>      
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Frontend</h4>
+                    <div class="row">
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">HTML</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">CSS</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" style="border: 1px solid yellow;">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">JavaScript</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" >
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" style="border: 1px solid magenta;">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">Bootstrap</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">React.Js</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">Tailwind CSS</h6>
+                        </div>
+                      </div>
+                    </div>      
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-md-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Backend</h4>
+                    <div class="row" >
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" style="border: 1px solid aqua;">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">Django</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" style="border: 1px solid green;">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">Node.Js</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">Express.Js</h6>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    
+                    
+                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Database</h4>
+                    <div class="row">
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" style="border: 1px solid aqua;">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">MySQL</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" style="border: 1px solid white;">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">PostgreSQL</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" style="border: 1px solid green;">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">MongoDB</h6>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    
+                    
+                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Extra Tech</h4>
+                    <div class="row">
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" ">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">Git</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" style="border: 1px solid magenta;">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">Adobe Photoshop</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" style="border: 1px solid green;">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">Figma</h6>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" style="border: 1px solid aqua;">
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">Microsoft Office</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" >
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">Linux Administration</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" >
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">Adobe Premier Pro</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" >
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">Wordpress</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" >
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">Firebase</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" >
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">FL Studio 20</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" >
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">Bandlab</h6>
+                        </div>
+                      </div>
+                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" >
+                        <div class="text-md-center text-xl-left">
+                          <h6 class="mb-1">Audacity</h6>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    
+                    
+                    
+                  </div>
+                </div>
+              </div>
+
+              
+             
+
+              <div class="col-md-8 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-row justify-content-between">
+                      <h4 class="card-title mb-1">Open Projects</h4>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="preview-list">
+                          <div class="preview-item border-bottom">
+                            <div class="preview-thumbnail">
+                              <div class="preview-icon bg-primary">
+                                <i class="mdi mdi-file-document"></i>
+                              </div>
+                            </div>
+                            <div class="preview-item-content d-sm-flex flex-grow">
+                              <div class="flex-grow">
+                                <h6 class="preview-subject">Medical Lab Management Software</h6>
+                                <p class="text-muted mb-0">Subtle webapp for patient management, inventory management etc.</p>
+                              </div>
+                              <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                                <p class="text-muted">15 minutes ago</p>
+                                <p class="text-muted mb-0">30 tasks, 5 issues </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="preview-item border-bottom">
+                            <div class="preview-thumbnail">
+                              <div class="preview-icon bg-success">
+                                <i class="mdi mdi-cloud-download"></i>
+                              </div>
+                            </div>
+                            <div class="preview-item-content d-sm-flex flex-grow">
+                              <div class="flex-grow">
+                                <h6 class="preview-subject">All in one Result Analyser</h6>
+                                <p class="text-muted mb-0">Easy Analysis of University Exam Results.</p>
+                              </div>
+                              <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                                <p class="text-muted">1 hour ago</p>
+                                <p class="text-muted mb-0">23 tasks, 5 issues </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="preview-item border-bottom">
+                            <div class="preview-thumbnail">
+                              <div class="preview-icon bg-info">
+                                <i class="mdi mdi-clock"></i>
+                              </div>
+                            </div>
+                            <div class="preview-item-content d-sm-flex flex-grow">
+                              <div class="flex-grow">
+                                <h6 class="preview-subject">Study Website</h6>
+                                <p class="text-muted mb-0">Easy site for study materials.</p>
+                              </div>
+                              <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                                <p class="text-muted">35 minutes ago</p>
+                                <p class="text-muted mb-0">15 tasks, 2 issues</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="preview-item border-bottom">
+                            <div class="preview-thumbnail">
+                              <div class="preview-icon bg-danger">
+                                <i class="mdi mdi-email-open"></i>
+                              </div>
+                            </div>
+                            <div class="preview-item-content d-sm-flex flex-grow">
+                              <div class="flex-grow">
+                                <h6 class="preview-subject">Nutriassist</h6>
+                                <p class="text-muted mb-0">Simple health planner.</p>
+                              </div>
+                              <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                                <p class="text-muted">55 minutes ago</p>
+                                <p class="text-muted mb-0">35 tasks, 7 issues </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="preview-item">
+                            <div class="preview-thumbnail">
+                              <div class="preview-icon bg-warning">
+                                <i class="mdi mdi-chart-pie"></i>
+                              </div>
+                            </div>
+                            <div class="preview-item-content d-sm-flex flex-grow">
+                              <div class="flex-grow">
+                                <h6 class="preview-subject">UI Design</h6>
+                                <p class="text-muted mb-0">New application planning.</p>
+                              </div>
+                              <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                                <p class="text-muted">50 minutes ago</p>
+                                <p class="text-muted mb-0">27 tasks, 4 issues </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="project">
+              <h3>Education</h3>
+            </div>
+
+            <div class="row">
+              <div class="col-md-8 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+        
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="preview-list">
+                          <div class="preview-item border-bottom">
+                            <div class="preview-thumbnail">
+                              <div class="preview-icon bg-primary">
+                                <i class="mdi mdi-book-open-variant"></i>
+                              </div>
+                            </div>
+                            <div class="preview-item-content d-sm-flex flex-grow">
+                              <div class="flex-grow">
+                                <h6 class="preview-subject">Bachelor of Computer Application</h6>
+                                <p class="text-muted mb-0">Kodiyeri Balakrishnan Memorial Govt. College Thalassery, Affiliated Under Kannur University</p>
+                              </div>
+                              <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                                <p class="text-muted">2021 - 2024</p>
+                                <p class="text-muted mb-0">CGPA Attained: 8.732 </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="preview-item border-bottom">
+                            <div class="preview-thumbnail">
+                              <div class="preview-icon bg-success">
+                                <i class="mdi mdi-book-open-variant"></i>
+                              </div>
+                            </div>
+                            <div class="preview-item-content d-sm-flex flex-grow">
+                              <div class="flex-grow">
+                                <h6 class="preview-subject">Higher Secondary Education in Computer Science</h6>
+                                <p class="text-muted mb-0">Chovva Higher Secondary School, Chovva, Kannur</p>
+                              </div>
+                              <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                                <p class="text-muted">2019 - 2021</p>
+                                <p class="text-muted mb-0">Marks Attained: 97% </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="preview-item border-bottom">
+                            <div class="preview-thumbnail">
+                              <div class="preview-icon bg-info">
+                                <i class="mdi mdi-book-open-variant"></i>
+                              </div>
+                            </div>
+                            <div class="preview-item-content d-sm-flex flex-grow">
+                              <div class="flex-grow">
+                                <h6 class="preview-subject">Secondary Education</h6>
+                                <p class="text-muted mb-0">Chovva Higher Secondary School, Chovva, Kannur</p>
+                              </div>
+                              <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                                <p class="text-muted">2018 - 2019</p>
+                                <p class="text-muted mb-0">Marks Attained: 100%</p>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title" id="social">Connect</h4>
+                    <div class="row">
+
+                      <div class="mx-2 mb-3">
+                        <div class="text-md-center text-xl-left">
+                          <a href="https://github.com/vishnuhidesh"><button type="button" class="btn btn-social-icon-text btn-github"><i class="fa fa-github"></i>GitHub</button></a>
+                        </div>
+                      </div>
+
+                      <div class="mx-2 mb-3">
+                        <div class="text-md-center text-xl-left">
+                          <a href="https://www.facebook.com/vishnu.hidesh"><button type="button" class="btn btn-social-icon-text btn-facebook"><i class="fa fa-facebook"></i>Facebook</button></a>
+                        </div>
+                      </div>
+                      <div class="mx-2 mb-3">
+                        <div class="text-md-center text-xl-left">
+                          <a href="https://www.linkedin.com/in/vishnu-hidesh-906033239/"><button type="button" class="btn btn-social-icon-text btn-linkedin"><i class="fa fa-linkedin"></i>LinkedIn</button></a>
+                        </div>
+                      </div>
+                      
+
+                      <div class="mx-2 mb-3">
+                        <div class="text-md-center text-xl-left">
+                          <a href="https://twitter.com/vishnu_hidesh"><button type="button" class="btn btn-social-icon-text btn-twitter"><i class="fa fa-twitter"></i>Twitter</button></a>
+                        </div>
+                      </div>
+                      
+                      
+
+                      
+                      
+                      
+                      
+                    </div>
+                    
+                    
+                    
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            
           </div>
+          <footer class="footer">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © Vishnu Hidesh 2024</span>
+              
+            </div>
+          </footer>
         </div>
       </div>
-    </section>
-
-    <section id="about">
-      <h2>About & Education</h2>
-      <div class="grid" style="grid-template-columns:1fr 1fr">
-        <div class="card">
-          <h3>About me</h3>
-          <p class="muted">I’m currently studying ADIS and learning vulnerability analysis. I enjoy hands-on labs and building small tools to automate repetitive tasks.</p>
-        </div>
-        <div class="card">
-          <h3>Education</h3>
-          <p class="muted"><strong>ADIS — Advanced Diploma in Cyber Security</strong><br>Class of 2025</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="card">
-        <p>Email me at <a href="mailto:ananthanpkd2001@gmail.com">ananthanpkd2001@gmail.com</a> or find me on <a href="https://github.com/evertrustai">GitHub</a>.</p>
-      </div>
-    </section>
-
-    <footer>
-      Thank you for visiting......
-    </footer>
-  </div>
-</body>
+    </div>
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="assets/vendors/chart.js/Chart.min.js"></script>
+    <script src="assets/vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
+    <script src="assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="assets/vendors/owl-carousel-2/owl.carousel.min.js"></script>
+    <script src="assets/js/off-canvas.js"></script>
+    <script src="assets/js/hoverable-collapse.js"></script>
+    <script src="assets/js/misc.js"></script>
+    <script src="assets/js/settings.js"></script>
+    <script src="assets/js/todolist.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+  </body>
 </html>
