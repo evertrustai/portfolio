@@ -20881,3 +20881,11 @@ div.tagsinput {
   flex: 1;
   min-width: 300px; /* so they don’t shrink too much */
 }
+/* Prevent card titles from breaking into two lines */
+.card h6,
+.card h4,
+.card-title {
+  white-space: nowrap;   /* keep text on one line */
+  overflow: hidden;      /* hide overflow if too long */
+  text-overflow: ellipsis; /* add "..." if text is too long */
+}
