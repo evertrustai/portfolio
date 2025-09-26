@@ -20869,3 +20869,15 @@ div.tagsinput {
   flex-grow: 1; }
 
 /*# sourceMappingURL=maps/style.css.map */
+/* Make columns align side by side */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* space between cards */
+}
+
+/* Ensure each column takes equal width */
+.col-md-4 {
+  flex: 1;
+  min-width: 300px; /* so they don’t shrink too much */
+}
