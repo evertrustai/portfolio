@@ -454,5 +454,66 @@
     <script src="assets/js/settings.js"></script>
     <script src="assets/js/todolist.js"></script>
     <script src="assets/js/dashboard.js"></script>
+     <script>
+
+    // Change favicon on load complete
+  window.addEventListener('load', function () {
+  const favicon = document.getElementById('favicon');
+  if (favicon) {
+    favicon.href = 'https://img.icons8.com/?size=100&id=110316&format=png&color=40C057'; // ✅ Valid image URL
+  }
+});
+
+    function enterSite() {
+      const overlay = document.getElementById("enter-overlay");
+      overlay.style.display = "none";
+
+      const loader = document.getElementById("loader");
+      loader.style.display = "flex";
+
+      const loadingText = document.getElementById("loading-text");
+      const cursor = document.querySelector(".cursor");
+
+      const lines = [
+        "[+] Initializing system...",
+        "[+] Loading modules...",
+        "[+] Scanning vulnerabilities...",
+        "[+] Establishing secure shell...",
+        "[+] Tracing route...",
+        "[+] Injecting payload...",
+        "[+] Uploading portfolio data...",
+        "[+] Executing main sequence...",
+        "[+] Access granted."
+      ];
+
+      let lineIndex = 0;
+      let charIndex = 0;
+      let delay = 50;
+
+      function typeTerminal() {
+        if (lineIndex < lines.length) {
+          if (charIndex < lines[lineIndex].length) {
+            loadingText.textContent += lines[lineIndex][charIndex];
+            charIndex++;
+            setTimeout(typeTerminal, delay);
+          } else {
+            loadingText.textContent += "\n";
+            charIndex = 0;
+            lineIndex++;
+            setTimeout(typeTerminal, 400);
+          }
+        } else {
+          cursor.style.display = "none";
+          loader.style.animation = "fadeOut 1s forwards";
+          setTimeout(() => {
+            loader.remove();
+            document.getElementById("main-body").classList.remove("overflow-hidden");
+          }, 1200);
+        }
+      }
+
+      setTimeout(typeTerminal, 1000);
+    }
+  </script>
   </body>
 </html>
