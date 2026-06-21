@@ -1,512 +1,699 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Anantha Narayanan R</title>
-    <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anantha Narayanan R — Security Researcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/vendors/jvectormap/jquery-jvectormap.css">
-    <link rel="stylesheet" href="assets/vendors/flag-icon-css/css/flag-icon.min.css">
-    <link rel="stylesheet" href="assets/vendors/owl-carousel-2/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/vendors/owl-carousel-2/owl.theme.default.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    
-  </head>
-  <body>
-    <div class="container-scroller">
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <ul class="nav">
-          <li class="nav-item profile">
-            
-          </li>
-          <li class="nav-item nav-category">
-            <span class="nav-link">Navigation</span>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="index.html">
-              <span class="menu-icon">
-                <i class="mdi mdi-speedometer"></i>
-              </span>
-              <span class="menu-title">Home</span>
-            </a>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="https://github.com/evertrustai">
-              <span class="menu-icon">
-                <i class="fa fa-github"></i>
-              </span>
-              <span class="menu-title">GitHub</span>
-              
-            </a>
-            
-      
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="https://www.linkedin.com/in/ananthanrayananr/">
-              <span class="menu-icon">
-                <i class="mdi mdi-linkedin"></i>
-              </span>
-              <span class="menu-title">LinkedIn</span>
-            </a>
-          </li>
-          
-          
-        </ul>
-      </nav>
-      <div class="container-fluid page-body-wrapper">
-        <nav class="navbar p-0 fixed-top d-flex flex-row">
-          <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
-          </div>
-          <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
-            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-              <span class="mdi mdi-menu"></span>
-            </button>
-            <ul class="navbar-nav w-100">
-              <li class="nav-item w-100">
-                
-              </li>
-            </ul>
-            <ul class="navbar-nav navbar-nav-right">
-              <li class="nav-item dropdown d-none d-lg-block">
-                <a class="nav-link btn btn-success create-new-button" href="#social"><span class="mdi mdi-account-plus mr-2"></span> Contact Me</a>
-                
-              </li>
-             
-              
-              
-            </ul>
-            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-              <span class="mdi mdi-format-line-spacing"></span>
-            </button>
-          </div>
-        </nav>
-        <div class="main-panel">
-          <div class="content-wrapper">
-            
-            <div class="row">
-              <div class="col-12 grid-margin stretch-card">
-                <div class="card corona-gradient-card profile-card">
-                  <img src="assets/images/dashboard/anr.jpg" class="gradient-corona-img rounded-circle mx-4" style="border: 4px solid white;" alt="">
-                  <h2 class="mb-1 mb-sm-0  vis">Anantha Narayanan R </h2>
-                  <span>
-                    <a href="https://www.instagram.com/evertrustai/" target="_blank" class="btn  btn-rounded get-started-btn insta mx-4">Follow on Instagram</a>
-                  </span>
-                </div>
-              </div>
-            </div>
+  :root {
+    --bg:      #0d0909;
+    --bg2:     #120b0b;
+    --bg3:     #1c1010;
+    --card:    #160d0d;
+    --border:  rgba(255,255,255,0.07);
+    --border2: rgba(255,255,255,0.13);
+    --text:    #f2eded;
+    --muted:   #907a7a;
+    --accent:  #e03030;
+    --accent2: #ff7070;
+    --accent3: #c0392b;
+    --critical:#e03030;
+    --high:    #e06020;
+    --medium:  #c49a27;
+    --low:     #22c55e;
+    --mono:    'JetBrains Mono', monospace;
+    --sans:    'Inter', sans-serif;
+  }
 
-            <div class="project">
-              <h3>Projects</h3>
-            </div>
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 15px; line-height: 1.7; overflow-x: hidden; }
 
-            <div class="row">
-              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-9">
-                        <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0">GitHub - Hash-ID Helper</h3>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <a href="https://github.com/evertrustai/hash-id-helper"><div class="icon icon-box-success ">
-                          <span class="mdi mdi-arrow-top-right icon-item"></span>
-                        </div></a>
-                      </div>
-                    </div>
-                    <h6 class="text-muted font-weight-normal">Smart Hash Identifier & Cracker Assistant</h6>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-9">
-                        <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0">TryHackMe — Hash Hunt</h3>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <a href="https://tryhackme.com/jr/hashhunt"><div class="icon icon-box-success">
-                          <span class="mdi mdi-arrow-top-right icon-item"></span>
-                        </div></a>
-                      </div>
-                    </div>
-                    <h6 class="text-muted font-weight-normal">Room walkthrough focusing on password cracking and hash analysis.</h6>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-9">
-                        <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0">AndroAccesser</h3>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <a href="https://github.com/evertrustai/AndroAccessMaintainer"><div class="icon icon-box-success">
-                          <span class="mdi mdi-arrow-top-right icon-item"></span>
-                        </div></a>
-                      </div>
-                    </div>
-                    <h6 class="text-muted font-weight-normal">A bash tool that builds Android reverse-shell APKs and automatically starts a Metasploit listener — for ethical penetration testing only.</h6>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-9">
-                        <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0">Blood Donor Finder App</h3>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <a href="https://github.com/evertrustai"><div class="icon icon-box-success">
-                          <span class="mdi mdi-arrow-top-right icon-item"></span>
-                        </div></a>
-                      </div>
-                    </div>
-                    <h6 class="text-muted font-weight-normal">Planned app to connect donors and seekers based on blood group and location</h6>
-                  </div>
-                </div>
-              </div>
-             
+  body::before {
+    content: ''; position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 0; opacity: 0.4;
+  }
+  body::after {
+    content: ''; position: fixed; inset: 0;
+    background-image: linear-gradient(rgba(224,48,48,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(224,48,48,0.03) 1px, transparent 1px);
+    background-size: 60px 60px; pointer-events: none; z-index: 0;
+  }
 
-           <div class="project">
-              <h3>What I Know</h3>
-            </div>
-            </div>  
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(13,9,9,0.88); backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border); padding: 0 2rem; height: 60px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo { font-family: var(--mono); font-size: 13px; color: var(--accent); letter-spacing: .05em; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 13px; letter-spacing: .03em; transition: color .2s; }
+  .nav-links a:hover { color: var(--text); }
 
-            <div class="row">
-              <div class="col-md-4 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">Offensive Security</h4>
-                    <div class="row">
-                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
-                        <div class="text-md-center text-xl-left">
-                          <h6 class="mb-1">VAPT</h6>
-                        </div>
-                      </div>
-                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
-                        <div class="text-md-center text-xl-left">
-                          <h6 class="mb-1">Wireless Hacking</h6>
-                        </div>
-                      </div>
-                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" style="border: 1px solid yellow;">
-                        <div class="text-md-center text-xl-left">
-                          <h6 class="mb-1">Bug Bounty</h6>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row" >
-                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" style="border: 1px solid magenta;">
-                        <div class="text-md-center text-xl-left">
-                          <h6 class="mb-1">Exploitation</h6>
-                        </div>
-                      </div>
-                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
-                        <div class="text-md-center text-xl-left">
-                          <h6 class="mb-1">Social Engineering</h6>
-                        </div>
-                      </div>
-                      <!-- <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
-                        <div class="text-md-center text-xl-left">
-                          <h6 class="mb-1"></h6>
-                        </div>
-                      </div> -->
-                    </div>      
-                  </div>
-                </div>
-              </div>
+  section { position: relative; z-index: 1; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
 
-              <div class="col-md-4 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">Defensive Security</h4>
-                    <div class="row">
-                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
-                        <div class="text-md-center text-xl-left">
-                          <h6 class="mb-1">Network Defense</h6>
-                        </div>
-                      </div>
-                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" style="border: 1px solid white;">
-                        <div class="text-md-center text-xl-left">
-                          <h6 class="mb-1">SOC</h6>
-                        </div>
-                      </div>
-                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" style="border: 1px solid aqua;">
-                        <div class="text-md-center text-xl-left">
-                          <h6 class="mb-1">SIEM</h6>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row" >
-                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
-                        <div class="text-md-center text-xl-left">
-                          <h6 class="mb-1">Cloud Security</h6>
-                        </div>
-                      </div>
-                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
-                        <div class="text-md-center text-xl-left">
-                          <h6 class="mb-1">Endpoint Security</h6>
-                        </div>
-                      </div>
-                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
-                        <div class="text-md-center text-xl-left">
-                          <h6 class="mb-1">Malware Analysis</h6>
-                        </div>
-                      </div>
-                    </div>      
-                  </div>
-                </div>
-              </div>
-      
+  #hero { min-height: 100vh; display: flex; align-items: center; padding: 80px 0 60px; }
+  .hero-inner { display: grid; grid-template-columns: 1fr auto; gap: 4rem; align-items: center; width: 100%; }
 
+  .hero-tag {
+    display: inline-block; font-family: var(--mono); font-size: 11px; letter-spacing: .1em;
+    color: var(--accent); background: rgba(224,48,48,0.09); border: 1px solid rgba(224,48,48,0.25);
+    border-radius: 3px; padding: 4px 10px; margin-bottom: 1.5rem; text-transform: uppercase;
+  }
+  h1 { font-size: clamp(2.4rem,5vw,3.6rem); font-weight: 700; line-height: 1.1; letter-spacing: -.02em; color: #fff; margin-bottom: 1rem; }
+  h1 span { color: var(--accent); }
+  .hero-subtitle { font-size: 1.05rem; color: var(--muted); margin-bottom: 2rem; max-width: 530px; line-height: 1.8; }
 
-               <div class="col-md-4 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">Frontend</h4>
-                    <div class="row">
-                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" style="border: 1px solid magenta;">
-                        <div class="text-md-center text-xl-left">
-                          <h6 class="mb-1">HTML</h6>
-                        </div>
-                      </div>
-                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" style="border: 1px solid green;">
-                        <div class="text-md-center text-xl-left">
-                          <h6 class="mb-1">JavaScript</h6>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row" >
-                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
-                        <div class="text-md-center text-xl-left">
-                          <h6 class="mb-1">Bootstrap</h6>
-                        </div>
-                      </div>
-                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
-                        <div class="text-md-center text-xl-left">
-                          <h6 class="mb-1">React.Js</h6>
-                        </div>
-                      </div>
-                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2" style="border: 1px solid yellow;">
-                        <div class="text-md-center text-xl-left">
-                          <h6 class="mb-1">CSS</h6>
-                        </div>
-                      </div>
-                      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded-lg mt-3 mx-2">
-                        <div class="text-md-center text-xl-left">
-                          <h6 class="mb-1">Tailwind CSS</h6>
-                        </div>
-                      </div>
-                    </div>      
-                  </div>
-                </div>
-              </div>
+  .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 2.5rem; }
+  .badge { font-family: var(--mono); font-size: 11px; padding: 5px 12px; border-radius: 3px; border: 1px solid; }
+  .badge-red   { color: var(--accent);  border-color: rgba(224,48,48,.3);   background: rgba(224,48,48,.06); }
+  .badge-grey  { color: #c0a8a8;        border-color: rgba(192,168,168,.25); background: rgba(192,168,168,.05); }
+  .badge-light { color: #d4b0b0;        border-color: rgba(212,176,176,.25); background: rgba(212,176,176,.05); }
 
-              
-              
-            <div class="project">
-              <h3>Education</h3>
-            </div>
-            </div>
+  .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 22px; border-radius: 4px; font-size: 13px; font-weight: 500; text-decoration: none; transition: all .2s; border: none; cursor: pointer; }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { background: #f04040; transform: translateY(-1px); }
+  .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border2); }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
 
-            <div class="row">
-              <div class="col-md-8 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-        
-                    <div class="row">
-                      <div class="col-12">
-                        <div class="preview-list">
-                          <div class="preview-item border-bottom">
-                            <div class="preview-thumbnail">
-                              <div class="preview-icon bg-primary">
-                                <i class="mdi mdi-book-open-variant"></i>
-                              </div>
-                            </div>
-                            <div class="preview-item-content d-sm-flex flex-grow">
-                              <div class="flex-grow">
-                                <h6 class="preview-subject">Advanced Diploma in Information Security</h6>
-                                <p class="text-muted mb-0">Offenso Academy , Kochi</p>
-                              </div>
-                              <div class="mr-auto text-sm-right pt-2 pt-sm-0">
-                                <p class="text-muted">2025 - present</p>
-                                
-                              </div>
-                            </div>
-                          </div>
-                          <div class="preview-item border-bottom">
-                            <div class="preview-thumbnail">
-                              <div class="preview-icon bg-success">
-                                <i class="mdi mdi-book-open-variant"></i>
-                              </div>
-                            </div>
-                            <div class="preview-item-content d-sm-flex flex-grow">
-                              <div class="flex-grow">
-                                <h6 class="preview-subject">Bachelor of Travel and Tourism Management</h6>
-                                <p class="text-muted mb-0">Mar Gregorios College of Arts and Science, Punnapara</p>
-                              </div>
-                              <div class="mr-auto text-sm-right pt-2 pt-sm-0">
-                                <p class="text-muted">2022 - 2025</p>
-                              
-                              </div>
-                            </div>
-                          </div>
-                          <div class="preview-item border-bottom">
-                            <div class="preview-thumbnail">
-                              <div class="preview-icon bg-info">
-                                <i class="mdi mdi-book-open-variant"></i>
-                              </div>
-                            </div>
-                            <div class="preview-item-content d-sm-flex flex-grow">
-                              <div class="flex-grow">
-                                <h6 class="preview-subject">Higher Secondary Education in Computer Commerce</h6>
-                                <p class="text-muted mb-0">S.N.M.H.S.S , Purakkad</p>
-                              </div>
-                              <div class="mr-auto text-sm-right pt-2 pt-sm-0">
-                                <p class="text-muted">2021 - 2022</p>
-                              
-                              </div>
-                            </div>
-                          </div>
-                          
-                          
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+  .avatar-wrap { position: relative; width: 220px; height: 220px; flex-shrink: 0; }
+  .avatar-ring { position: absolute; inset: -8px; border-radius: 50%; border: 1px solid rgba(224,48,48,0.3); animation: spin 12s linear infinite; }
+  .avatar-ring::before { content: ''; position: absolute; top: -3px; left: 50%; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; transform: translateX(-50%); }
+  @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  .avatar-fallback {
+    width: 100%; height: 100%; border-radius: 50%;
+    background: linear-gradient(135deg, #2a0a0a 0%, #120b0b 100%);
+    border: 2px solid var(--border2); display: flex; align-items: center; justify-content: center;
+    font-family: var(--mono); font-size: 2.8rem; font-weight: 700; color: var(--accent); letter-spacing: -.03em;
+  }
 
-              <div class="col-md-4 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title" id="social">Connect</h4>
-                    <div class="row">
+  .section-wrap { padding: 5rem 0; }
+  .section-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 3rem; }
+  .section-eyebrow { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: .12em; text-transform: uppercase; }
+  .section-title { font-size: 1.75rem; font-weight: 700; color: #fff; letter-spacing: -.01em; margin-top: 4px; }
+  .section-line { flex: 1; height: 1px; background: var(--border); }
 
-                      <div class="mx-2 mb-3">
-                        <div class="text-md-center text-xl-left">
-                          <a href="https://github.com/evertrustai"><button type="button" class="btn btn-social-icon-text btn-github"><i class="fa fa-github"></i>GitHub</button></a>
-                        </div>
-                      </div>
+  .cve-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: 1rem; }
+  .cve-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+    padding: 1.25rem 1.5rem; position: relative; overflow: hidden;
+    transition: border-color .2s, transform .2s;
+  }
+  .cve-card:hover { transform: translateY(-2px); border-color: var(--border2); }
+  .cve-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; }
+  .cve-card.critical::before { background: var(--critical); }
+  .cve-card.high::before     { background: var(--high); }
+  .cve-card.medium::before   { background: var(--medium); }
 
-                      <div class="mx-2 mb-3">
-                        <div class="text-md-center text-xl-left">
-                          <a href="https://www.facebook.com/"><button type="button" class="btn btn-social-icon-text btn-facebook"><i class="fa fa-facebook"></i>Facebook</button></a>
-                        </div>
-                      </div>
-                      <div class="mx-2 mb-3">
-                        <div class="text-md-center text-xl-left">
-                          <a href="https://www.linkedin.com/in/ananthanrayananr2004/"><button type="button" class="btn btn-social-icon-text btn-linkedin"><i class="fa fa-linkedin"></i>LinkedIn</button></a>
-                        </div>
-                      </div>
-                      
+  .cve-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: .75rem; }
+  .cve-id { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+  .cvss-badge { font-family: var(--mono); font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 3px; }
+  .cvss-critical { background: rgba(224,48,48,.15);  color: var(--critical); }
+  .cvss-high     { background: rgba(224,96,32,.15);  color: var(--high); }
+  .cvss-medium   { background: rgba(196,154,39,.15); color: var(--medium); }
+  .cve-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: .5rem; line-height: 1.4; }
+  .cve-desc  { font-size: 12px; color: var(--muted); line-height: 1.6; }
+  .cve-footer { display: flex; align-items: center; gap: 8px; margin-top: 1rem; padding-top: .75rem; border-top: 1px solid var(--border); }
+  .cve-target { font-family: var(--mono); font-size: 10px; color: var(--muted); background: var(--bg3); padding: 2px 8px; border-radius: 2px; }
+  .cve-link { margin-left: auto; font-size: 11px; color: var(--accent); text-decoration: none; }
+  .cve-link:hover { color: var(--accent2); }
 
-          
-                      
+  .hof-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px,1fr)); gap: 12px; }
+  .hof-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; transition: border-color .2s; }
+  .hof-card:hover { border-color: rgba(224,48,48,.3); }
+  .hof-icon { width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 22px; background: var(--bg3); }
+  .hof-name { font-weight: 600; font-size: 14px; color: var(--text); }
+  .hof-type { font-family: var(--mono); font-size: 10px; color: var(--muted); }
 
-                      
-                      
-                      
-                      
-                    </div>
-                    
-                    
-                    
-                  </div>
-                </div>
-              </div>
+  .platform-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1.5rem; }
+  .platform-badge { display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: var(--card); border: 1px solid var(--border); border-radius: 6px; font-size: 12px; font-weight: 500; color: var(--text); }
+  .platform-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
 
-            </div>
+  .domain-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px,1fr)); gap: 12px; margin-bottom: 2.5rem; }
+  .domain-card { background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 8px; padding: 1.25rem 1.5rem; transition: border-color .2s; }
+  .domain-card:hover { border-color: rgba(224,48,48,.4); }
+  .domain-card-title { font-weight: 700; font-size: 14px; color: #fff; margin-bottom: 6px; }
+  .domain-card-desc  { font-size: 12px; color: var(--muted); line-height: 1.6; }
 
-            
-          </div>
-          <footer class="footer">
-            <div class="d-sm-flex justify-content-center justify-content-sm-between">
-              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © Ananthan 2025</span>
-              
-            </div>
-          </footer>
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 1rem; }
+  .skill-group { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; }
+  .skill-group-title { font-family: var(--mono); font-size: 11px; color: var(--accent); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 1rem; }
+  .tag-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
+  .skill-tag { font-size: 12px; padding: 4px 10px; border-radius: 3px; background: var(--bg3); border: 1px solid var(--border); color: var(--text); font-family: var(--mono); }
+
+  .proj-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 1rem; }
+  .proj-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; transition: border-color .2s, transform .2s; text-decoration: none; display: flex; flex-direction: column; gap: .75rem; }
+  .proj-card:hover { border-color: var(--border2); transform: translateY(-2px); }
+  .proj-icon { width: 40px; height: 40px; border-radius: 8px; background: var(--bg3); display: flex; align-items: center; justify-content: center; font-size: 18px; }
+  .proj-title { font-weight: 600; font-size: 15px; color: #fff; }
+  .proj-desc  { font-size: 13px; color: var(--muted); line-height: 1.6; flex: 1; }
+  .proj-lang  { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11px; color: var(--muted); }
+  .lang-dot   { width: 8px; height: 8px; border-radius: 50%; }
+
+  .timeline { position: relative; padding-left: 2rem; }
+  .timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 8px; width: 1px; background: var(--border); }
+  .timeline-item { position: relative; margin-bottom: 2.5rem; }
+  .timeline-item::before { content: ''; position: absolute; left: -2.4rem; top: 6px; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg); box-shadow: 0 0 0 2px rgba(224,48,48,.3); }
+  .timeline-date  { font-family: var(--mono); font-size: 11px; color: var(--accent); margin-bottom: 6px; }
+  .timeline-title { font-weight: 600; font-size: 16px; color: #fff; margin-bottom: 4px; }
+  .timeline-org   { font-size: 13px; color: var(--muted); margin-bottom: .75rem; }
+  .timeline-bullets { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+  .timeline-bullets li { font-size: 13px; color: var(--muted); padding-left: 1.25rem; position: relative; }
+  .timeline-bullets li::before { content: '›'; position: absolute; left: 0; color: var(--accent); }
+
+  .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px,1fr)); gap: 1rem; }
+  .cert-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; }
+  .cert-icon { font-size: 24px; flex-shrink: 0; line-height: 1; padding-top: 2px; }
+  .cert-name { font-weight: 600; font-size: 14px; color: #fff; margin-bottom: 4px; }
+  .cert-org  { font-size: 12px; color: var(--muted); }
+  .cert-year { font-family: var(--mono); font-size: 11px; color: var(--accent); margin-top: 4px; }
+
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+  .contact-links { display: flex; flex-direction: column; gap: 12px; }
+  .contact-link { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: var(--card); border: 1px solid var(--border); border-radius: 6px; text-decoration: none; transition: border-color .2s; }
+  .contact-link:hover { border-color: var(--accent); }
+  .contact-link-icon { width: 32px; height: 32px; border-radius: 6px; background: var(--bg3); display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
+  .contact-link-text strong { display: block; font-size: 13px; font-weight: 600; color: var(--text); }
+  .contact-link-text span   { font-size: 12px; color: var(--muted); font-family: var(--mono); }
+
+  .terminal { background: #0e0808; border: 1px solid rgba(224,48,48,.2); border-radius: 8px; overflow: hidden; font-family: var(--mono); font-size: 12.5px; }
+  .terminal-bar { background: #1a0d0d; padding: 10px 16px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid rgba(224,48,48,.12); }
+  .t-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .t-red { background: #ff5f57; } .t-yellow { background: #febc2e; } .t-green { background: #28c840; }
+  .t-title { font-size: 11px; color: var(--muted); margin-left: 6px; }
+  .terminal-body { padding: 1.25rem 1.5rem; line-height: 2; }
+  .t-prompt  { color: var(--accent); }
+  .t-cmd     { color: #fff; }
+  .t-bracket { color: #5a2020; }
+  .t-key     { color: #ff9999; }
+  .t-str     { color: #ffd0cc; }
+  .t-num     { color: var(--accent2); }
+
+  .divider { height: 1px; background: var(--border); position: relative; z-index: 1; }
+  footer { position: relative; z-index: 1; border-top: 1px solid var(--border); padding: 2rem; text-align: center; font-family: var(--mono); font-size: 11px; color: var(--muted); }
+
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  @media (max-width: 768px) {
+    nav { padding: 0 1rem; } .nav-links { display: none; }
+    .hero-inner { grid-template-columns: 1fr; } .avatar-wrap { display: none; }
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">evertrustai<span style="color:var(--muted)">@security</span></div>
+  <ul class="nav-links">
+    <li><a href="#cves">CVEs</a></li>
+    <li><a href="#hof">Hall of Fame</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-tag">Security Researcher &amp; Bug Bounty Hunter</div>
+        <h1>Anantha<br>Narayanan <span>R</span></h1>
+        <p class="hero-subtitle">
+          Independent vulnerability researcher credited with 4 CVEs in PraisonAI. Specialising in VAPT, web application security, API pentesting, SOC operations, SIEM, and AI/LLM attack surfaces.
+        </p>
+        <p style="font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:0.04em;margin-top:-1rem;margin-bottom:2rem;line-height:1.8;">
+          Security researcher &nbsp;|&nbsp; VAPT &nbsp;|&nbsp; Penetration tester &nbsp;|&nbsp; 4x CVE &nbsp;|&nbsp; Bug hunter &nbsp;|&nbsp; AI &nbsp;|&nbsp; MCP &nbsp;|&nbsp; IoT &nbsp;|&nbsp; CTF Player
+        </p>
+        <div class="hero-badges">
+          <span class="badge badge-red">Bug Bounty</span>
+          <span class="badge badge-grey">VAPT</span>
+          <span class="badge badge-red">CVE Researcher</span>
+          <span class="badge badge-grey">SOC</span>
+          <span class="badge badge-grey">SIEM</span>
+          <span class="badge badge-light">AI/LLM Security</span>
+          <span class="badge badge-light">Android Pentesting</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Get In Touch ↗</a>
+          <a href="https://github.com/evertrustai" target="_blank" class="btn btn-outline">GitHub</a>
+          <a href="https://www.linkedin.com/in/ananthanrayananr/" target="_blank" class="btn btn-outline">LinkedIn</a>
+          <a href="https://medium.com/@evertrustai" target="_blank" class="btn btn-outline">Medium</a>
+        </div>
+      </div>
+      <div class="avatar-wrap">
+        <div class="avatar-ring"></div>
+        <img src="data:image/jpeg;base64,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" alt="Anantha Narayanan R" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid rgba(255,255,255,0.13);">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CVEs -->
+<section id="cves">
+  <div class="container section-wrap">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-eyebrow">// published advisories</div>
+        <h2 class="section-title">CVE Research</h2>
+      </div>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="cve-grid">
+      <div class="cve-card critical reveal">
+        <div class="cve-header">
+          <span class="cve-id">CVE-2026-55536</span>
+          <span class="cvss-badge cvss-critical">CVSS 9.1</span>
+        </div>
+        <div class="cve-title">Remote Code Execution via Shell Command Injection</div>
+        <div class="cve-desc">Critical RCE in PraisonAI allowing arbitrary OS command execution through unsanitised user input passed to shell handlers.</div>
+        <div class="cve-footer">
+          <span class="cve-target">praisonai / praisonaiagents</span>
+          <a href="https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-x44h-65qv-cw74" target="_blank" class="cve-link">GHSA ↗</a>
+        </div>
+      </div>
+
+      <div class="cve-card critical reveal">
+        <div class="cve-header">
+          <span class="cve-id">CVE-2026-55537</span>
+          <span class="cvss-badge cvss-critical">CVSS 9.1</span>
+        </div>
+        <div class="cve-title">Authentication Bypass — Patch Bypass</div>
+        <div class="cve-desc">Patch bypass discovered by re-auditing an existing fix. The remediation was incomplete, allowing the original auth bypass to persist via an alternate code path.</div>
+        <div class="cve-footer">
+          <span class="cve-target">praisonai / praisonaiagents</span>
+          <a href="https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-gxmw-5f7x-6g22" target="_blank" class="cve-link">GHSA ↗</a>
+        </div>
+      </div>
+
+      <div class="cve-card high reveal">
+        <div class="cve-header">
+          <span class="cve-id">CVE-2026-55526</span>
+          <span class="cvss-badge cvss-high">CVSS High</span>
+        </div>
+        <div class="cve-title">Privilege Escalation via Agent Workflow — Patch Bypass</div>
+        <div class="cve-desc">Second patch bypass found through systematic re-audit. Privilege escalation via malicious agent workflow injection, distinct from the already-patched variant.</div>
+        <div class="cve-footer">
+          <span class="cve-target">praisonai / praisonaiagents</span>
+          <a href="https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-6g6r-q6gw-w8fg" target="_blank" class="cve-link">GHSA ↗</a>
+        </div>
+      </div>
+
+      <div class="cve-card medium reveal">
+        <div class="cve-header">
+          <span class="cve-id">CVE-2026-55527</span>
+          <span class="cvss-badge cvss-medium">CVSS 7.1</span>
+        </div>
+        <div class="cve-title">Information Disclosure via Unauthenticated Endpoint</div>
+        <div class="cve-desc">Unauthenticated access to sensitive agent configuration data, exposing workflow definitions and internal tooling metadata to any network-reachable caller.</div>
+        <div class="cve-footer">
+          <span class="cve-target">praisonai / praisonaiagents</span>
+          <a href="https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-rg5q-pp8p-f7jm" target="_blank" class="cve-link">GHSA ↗</a>
         </div>
       </div>
     </div>
-    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
-    <script src="assets/vendors/chart.js/Chart.min.js"></script>
-    <script src="assets/vendors/progressbar.js/progressbar.min.js"></script>
-    <script src="assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
-    <script src="assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-    <script src="assets/vendors/owl-carousel-2/owl.carousel.min.js"></script>
-    <script src="assets/js/off-canvas.js"></script>
-    <script src="assets/js/hoverable-collapse.js"></script>
-    <script src="assets/js/misc.js"></script>
-    <script src="assets/js/settings.js"></script>
-    <script src="assets/js/todolist.js"></script>
-    <script src="assets/js/dashboard.js"></script>
-     <script>
-document.addEventListener("DOMContentLoaded", () => {
-  // Change favicon after load
-  const favicon = document.getElementById('favicon');
-  if (favicon) {
-    favicon.href = 'https://img.icons8.com/?size=100&id=110316&format=png&color=40C057';
-  }
+    <p style="margin-top:1.25rem; font-size:12px; color:var(--muted); font-family:var(--mono);">
+      All four CVEs patched in praisonaiagents &ge; 1.6.58 / praisonai &ge; 4.6.58. Two findings were patch bypasses discovered by re-auditing existing fixes.
+    </p>
+  </div>
+</section>
 
-  // Terminal-style loader
-  window.enterSite = function () {
-    const overlay = document.getElementById("enter-overlay");
-    const loader = document.getElementById("loader");
-    const loadingText = document.getElementById("loading-text");
-    const cursor = document.querySelector(".cursor");
+<div class="divider"></div>
 
-    if (!overlay || !loader || !loadingText || !cursor) return;
+<!-- HALL OF FAME -->
+<section id="hof">
+  <div class="container section-wrap">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-eyebrow">// recognition</div>
+        <h2 class="section-title">Hall of Fame</h2>
+      </div>
+      <div class="section-line"></div>
+    </div>
+    <div class="hof-grid">
+      <div class="hof-card reveal">
+        <div class="hof-icon">🚀</div>
+        <div class="hof-name">NASA</div>
+        <div class="hof-type">VDP Credit</div>
+      </div>
+      <div class="hof-card reveal">
+        <div class="hof-icon">🔍</div>
+        <div class="hof-name">Google</div>
+        <div class="hof-type">Security Credit</div>
+      </div>
+      <div class="hof-card reveal">
+        <div class="hof-icon">🎮</div>
+        <div class="hof-name">Kick Beta</div>
+        <div class="hof-type">Bug Bounty Credit</div>
+      </div>
+      <div class="hof-card reveal">
+        <div class="hof-icon">🏥</div>
+        <div class="hof-name">Max Healthcare</div>
+        <div class="hof-type">Security Credit</div>
+      </div>
+    </div>
+    <div class="platform-row reveal">
+      <div class="platform-badge"><span class="dot"></span>HackerOne</div>
+      <div class="platform-badge"><span class="dot"></span>Bugcrowd</div>
+      <div class="platform-badge"><span class="dot"></span>Intigriti</div>
+      <div class="platform-badge"><span class="dot"></span>YesWeHack</div>
+      <div class="platform-badge"><span class="dot"></span>MSRC</div>
+      <div class="platform-badge"><span class="dot"></span>Immunefi</div>
+    </div>
+  </div>
+</section>
 
-    overlay.style.display = "none";
-    loader.style.display = "flex";
+<div class="divider"></div>
 
-    const lines = [
-      "[+] Initializing system...",
-      "[+] Loading modules...",
-      "[+] Scanning vulnerabilities...",
-      "[+] Establishing secure shell...",
-      "[+] Access granted."
-    ];
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container section-wrap">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-eyebrow">// expertise domains</div>
+        <h2 class="section-title">Skills &amp; Tools</h2>
+      </div>
+      <div class="section-line"></div>
+    </div>
 
-    let lineIndex = 0, charIndex = 0;
-    const delay = 50;
+    <div class="domain-row reveal">
+      <div class="domain-card">
+        <div class="domain-card-title">⚔️ VAPT</div>
+        <div class="domain-card-desc">Full-scope Vulnerability Assessment &amp; Penetration Testing across web, API, mobile, and internal network surfaces. Professional DOCX/PDF report writing with CVSS-graded findings.</div>
+      </div>
+      <div class="domain-card">
+        <div class="domain-card-title">🎯 Bug Bounty Hunting</div>
+        <div class="domain-card-desc">Active hunter on HackerOne, Bugcrowd, Intigriti, YesWeHack. 4 CVEs published, Hall of Fame at NASA, Google, Kick, Max Healthcare. Attacker-mindset, zero-noise methodology.</div>
+      </div>
+      <div class="domain-card">
+        <div class="domain-card-title">🖥️ SOC Operations</div>
+        <div class="domain-card-desc">Security Operations Centre fundamentals — alert triage, incident detection, threat hunting workflows, escalation procedures, and log-driven investigation methodology.</div>
+      </div>
+      <div class="domain-card">
+        <div class="domain-card-title">📊 SIEM</div>
+        <div class="domain-card-desc">Security Information &amp; Event Management — log aggregation, correlation rule design, Splunk SPL query authoring, dashboard building, and anomaly-based detection pipelines.</div>
+      </div>
+    </div>
 
-    function typeTerminal() {
-      if (lineIndex < lines.length) {
-        if (charIndex < lines[lineIndex].length) {
-          loadingText.textContent += lines[lineIndex][charIndex++];
-          setTimeout(typeTerminal, delay);
-        } else {
-          loadingText.textContent += "\n";
-          charIndex = 0;
-          lineIndex++;
-          setTimeout(typeTerminal, 400);
-        }
-      } else {
-        cursor.style.display = "none";
-        loader.style.animation = "fadeOut 1s forwards";
-        setTimeout(() => loader.remove(), 1000);
-      }
-    }
-    typeTerminal();
-  };
-});
+    <div class="skills-grid">
+      <div class="skill-group reveal">
+        <div class="skill-group-title">Offensive Web</div>
+        <div class="tag-cloud">
+          <span class="skill-tag">SQLi</span><span class="skill-tag">XSS</span><span class="skill-tag">SSRF</span>
+          <span class="skill-tag">IDOR</span><span class="skill-tag">SSTI</span><span class="skill-tag">XXE</span>
+          <span class="skill-tag">JWT Attacks</span><span class="skill-tag">CSRF</span>
+          <span class="skill-tag">OAuth Flaws</span><span class="skill-tag">Race Conditions</span>
+          <span class="skill-tag">Request Smuggling</span><span class="skill-tag">Cache Poisoning</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <div class="skill-group-title">API &amp; Mobile</div>
+        <div class="tag-cloud">
+          <span class="skill-tag">REST API</span><span class="skill-tag">GraphQL</span>
+          <span class="skill-tag">Android APK</span><span class="skill-tag">JADX</span>
+          <span class="skill-tag">Frida</span><span class="skill-tag">MobSF</span>
+          <span class="skill-tag">SSL Pinning Bypass</span><span class="skill-tag">Smali Analysis</span>
+          <span class="skill-tag">Intent Hijacking</span><span class="skill-tag">BOLA</span>
+          <span class="skill-tag">Mass Assignment</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <div class="skill-group-title">Tools &amp; Platforms</div>
+        <div class="tag-cloud">
+          <span class="skill-tag">Burp Suite Pro</span><span class="skill-tag">sqlmap</span>
+          <span class="skill-tag">nmap</span><span class="skill-tag">ffuf</span>
+          <span class="skill-tag">nuclei</span><span class="skill-tag">subfinder</span>
+          <span class="skill-tag">amass</span><span class="skill-tag">httpx</span>
+          <span class="skill-tag">katana</span><span class="skill-tag">Semgrep</span>
+          <span class="skill-tag">Metasploit</span><span class="skill-tag">Wireshark</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <div class="skill-group-title">SOC / SIEM</div>
+        <div class="tag-cloud">
+          <span class="skill-tag">Splunk SPL</span><span class="skill-tag">Log Analysis</span>
+          <span class="skill-tag">Alert Triage</span><span class="skill-tag">Threat Hunting</span>
+          <span class="skill-tag">Incident Response</span><span class="skill-tag">IOC Detection</span>
+          <span class="skill-tag">Correlation Rules</span><span class="skill-tag">MITRE ATT&amp;CK</span>
+          <span class="skill-tag">Dashboard Building</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <div class="skill-group-title">AI / LLM Security</div>
+        <div class="tag-cloud">
+          <span class="skill-tag">Prompt Injection</span><span class="skill-tag">Jailbreaking</span>
+          <span class="skill-tag">MCP Security</span><span class="skill-tag">RAG Poisoning</span>
+          <span class="skill-tag">LLM Red Teaming</span><span class="skill-tag">Guardrail Bypass</span>
+          <span class="skill-tag">Indirect Injection</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <div class="skill-group-title">Programming</div>
+        <div class="tag-cloud">
+          <span class="skill-tag">Python</span><span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Bash</span><span class="skill-tag">HTML/CSS</span>
+          <span class="skill-tag">React.js</span><span class="skill-tag">Tailwind CSS</span>
+          <span class="skill-tag">Bootstrap</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container section-wrap">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-eyebrow">// open source</div>
+        <h2 class="section-title">Projects</h2>
+      </div>
+      <div class="section-line"></div>
+    </div>
+    <div class="proj-grid">
+      <a href="https://github.com/evertrustai/RaceBlind" target="_blank" class="proj-card reveal">
+        <div class="proj-icon">&#x26A1;</div>
+        <div class="proj-title">RaceBlind</div>
+        <div class="proj-desc">Smart race condition hunting engine with HTTP/2 single-packet attacks, httpx+h2, Rich TUI dashboard, and Pydantic v2 models. Integrates with Burp Suite Pro via Jython extension. 1,000+ endpoint processing validated.</div>
+        <div class="proj-lang"><span class="lang-dot" style="background:#3572A5"></span>Python &middot; Burp Extension &middot; HTTP/2</div>
+      </a>
+      <a href="https://github.com/evertrustai/AndroAccessMaintainer" target="_blank" class="proj-card reveal">
+        <div class="proj-icon">&#x1F4F1;</div>
+        <div class="proj-title">AndroAccessMaintainer</div>
+        <div class="proj-desc">Bash tool that generates Android reverse-shell APKs and automatically starts a Metasploit listener. Built for ethical penetration testing and red-team lab environments only.</div>
+        <div class="proj-lang"><span class="lang-dot" style="background:#89e051"></span>Shell &middot; Metasploit &middot; Android</div>
+      </a>
+      <a href="https://github.com/evertrustai/hash-id-helper" target="_blank" class="proj-card reveal">
+        <div class="proj-icon">&#x1F510;</div>
+        <div class="proj-title">Hash-ID Helper</div>
+        <div class="proj-desc">Smart hash identifier and cracker assistant. Automatically detects hash type and recommends the optimal cracking strategy or tool for the identified algorithm.</div>
+        <div class="proj-lang"><span class="lang-dot" style="background:#3572A5"></span>Python</div>
+      </a>
+      <a href="https://github.com/evertrustai/xss_core" target="_blank" class="proj-card reveal">
+        <div class="proj-icon">&#x1F489;</div>
+        <div class="proj-title">XSS Core</div>
+        <div class="proj-desc">Context-aware XSS payload generation and testing toolkit with WAF bypass variants for reflected, stored, and DOM-based injection points.</div>
+        <div class="proj-lang"><span class="lang-dot" style="background:#3572A5"></span>Python</div>
+      </a>
+      <a href="https://github.com/evertrustai/hydrawrap" target="_blank" class="proj-card reveal">
+        <div class="proj-icon">&#x1F40D;</div>
+        <div class="proj-title">HydraWrap</div>
+        <div class="proj-desc">Python wrapper for Hydra brute-force attacks. Clean CLI, protocol selection, and structured output parsing for credential testing in authorised engagements.</div>
+        <div class="proj-lang"><span class="lang-dot" style="background:#e34c26"></span>Python &middot; Hydra</div>
+      </a>
+      <a href="https://medium.com/@evertrustai" target="_blank" class="proj-card reveal">
+        <div class="proj-icon">&#x270D;&#xFE0F;</div>
+        <div class="proj-title">Security Writeups &mdash; Medium</div>
+        <div class="proj-desc">Technical writeups on CVE research, bug bounty methodology, VAPT findings, and security tooling. Published on Medium under the evertrustai handle.</div>
+        <div class="proj-lang"><span class="lang-dot" style="background:#e03030"></span>Medium &middot; Writeups</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container section-wrap">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-eyebrow">// background</div>
+        <h2 class="section-title">Experience &amp; Education</h2>
+      </div>
+      <div class="section-line"></div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem;">
+      <div>
+        <div class="section-eyebrow reveal" style="margin-bottom:1.5rem;">Work</div>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-date">Jun 2026 &ndash; Present &nbsp;&middot;&nbsp; 3 months</div>
+            <div class="timeline-title">Cybersecurity Analyst &mdash; R&amp;D</div>
+            <div class="timeline-org">
+              Offenso Hackers Academy &middot; Kochi, Kerala<br>
+              <span style="font-family:var(--mono);font-size:10px;color:var(--accent)">Hackware Security Solutions &middot; Group ID: HSS-INT-0626-01</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Full VAPT engagements with professional DOCX/PDF pentest reports</li>
+              <li>Offenso Bank VAPT: 14 confirmed findings &mdash; JWT, BAC, IDOR, SQLi, rate limiting, price manipulation, CSRF, clickjacking, MongoDB disclosure</li>
+              <li>Researched AI/LLM security attack surfaces and MCP server vulnerabilities</li>
+              <li>Built RaceBlind &mdash; smart HTTP/2 race-condition hunting engine</li>
+              <li>Developed LLM red-team prompt generators covering 8 attack vector categories</li>
+            </ul>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-date">2024 &ndash; Ongoing</div>
+            <div class="timeline-title">Independent Bug Bounty Hunter</div>
+            <div class="timeline-org">Bugcrowd &middot; HackerOne &middot; Intigriti &middot; YesWeHack &middot; MSRC</div>
+            <ul class="timeline-bullets">
+              <li>4 CVEs published in PraisonAI (Critical 9.1 to High 7.1); two were patch bypasses</li>
+              <li>Hall of Fame: NASA, Google, Kick Beta, Max Healthcare</li>
+              <li>Active on Fireblocks, Orient Electric, Paddle, Infomaniak, Zerodha, Shopify, T-Mobile, OLX programs</li>
+              <li>CNCF Radius: 4 critical findings under lab PoC validation (CVSS 9.9, 9.9, 9.3, 7.3)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="section-eyebrow reveal" style="margin-bottom:1.5rem;">Education</div>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-date">2025 &ndash; Present</div>
+            <div class="timeline-title">Advanced Diploma in Information Security (ADIS)</div>
+            <div class="timeline-org">Offenso Hackers Academy &middot; Kochi</div>
+            <ul class="timeline-bullets">
+              <li>Web, mobile, network, and cloud penetration testing</li>
+              <li>Active CVE research integrated with live bug bounty engagements</li>
+              <li>SOC operations and SIEM fundamentals</li>
+            </ul>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-date">2022 &ndash; 2025</div>
+            <div class="timeline-title">B.Com Travel &amp; Tourism Management</div>
+            <div class="timeline-org">Mar Gregorios College, Punnapara &middot; University of Kerala</div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-date">2021 &ndash; 2022</div>
+            <div class="timeline-title">Higher Secondary &mdash; Computer Commerce</div>
+            <div class="timeline-org">S.N.M.H.S.S, Purakkad</div>
+          </div>
+        </div>
+        <div class="section-eyebrow reveal" style="margin-top:2rem; margin-bottom:1.25rem;">Certifications</div>
+        <div class="cert-grid">
+          <div class="cert-card reveal">
+            <div class="cert-icon">&#x1F3C5;</div>
+            <div>
+              <div class="cert-name">CompTIA PenTest+</div>
+              <div class="cert-org">CompTIA</div>
+              <div class="cert-year">2026</div>
+            </div>
+          </div>
+          <div class="cert-card reveal">
+            <div class="cert-icon">&#x1F537;</div>
+            <div>
+              <div class="cert-name">Microsoft SC-900</div>
+              <div class="cert-org">Security, Compliance &amp; Identity</div>
+              <div class="cert-year">2025</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container section-wrap">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-eyebrow">// reach out</div>
+        <h2 class="section-title">Contact</h2>
+      </div>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="terminal reveal">
+        <div class="terminal-bar">
+          <span class="t-dot t-red"></span><span class="t-dot t-yellow"></span><span class="t-dot t-green"></span>
+          <span class="t-title">whoami.json</span>
+        </div>
+        <div class="terminal-body">
+          <div><span class="t-prompt">$</span> <span class="t-cmd">cat whoami.json</span></div>
+          <div style="margin-top:6px" class="t-bracket">{</div>
+          <div>&nbsp;&nbsp;<span class="t-key">"name"</span>: <span class="t-str">"Anantha Narayanan R"</span>,</div>
+          <div>&nbsp;&nbsp;<span class="t-key">"handle"</span>: <span class="t-str">"evertrustai"</span>,</div>
+          <div>&nbsp;&nbsp;<span class="t-key">"location"</span>: <span class="t-str">"Alappuzha, Kerala, India"</span>,</div>
+          <div>&nbsp;&nbsp;<span class="t-key">"email"</span>: [<span class="t-str">"ananthanpkd1234@gmail.com"</span>, <span class="t-str">"evertrustai@gmail.com"</span>],</div>
+          <div>&nbsp;&nbsp;<span class="t-key">"cves"</span>: <span class="t-num">4</span>,</div>
+          <div>&nbsp;&nbsp;<span class="t-key">"hof"</span>: [<span class="t-str">"NASA"</span>, <span class="t-str">"Google"</span>, <span class="t-str">"Kick"</span>, <span class="t-str">"Max Healthcare"</span>],</div>
+          <div>&nbsp;&nbsp;<span class="t-key">"expertise"</span>: [<span class="t-str">"VAPT"</span>, <span class="t-str">"Bug Bounty"</span>, <span class="t-str">"SOC"</span>, <span class="t-str">"SIEM"</span>],</div>
+          <div>&nbsp;&nbsp;<span class="t-key">"open_to"</span>: [<span class="t-str">"security roles"</span>, <span class="t-str">"VAPT engagements"</span>, <span class="t-str">"collab"</span>]</div>
+          <div class="t-bracket">}</div>
+        </div>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:ananthanpkd1234@gmail.com" class="contact-link reveal">
+          <div class="contact-link-icon">&#x1F4E7;</div>
+          <div class="contact-link-text"><strong>Email</strong><span>ananthanpkd1234@gmail.com</span></div>
+        </a>
+        <a href="mailto:evertrustai@gmail.com" class="contact-link reveal">
+          <div class="contact-link-icon">&#x1F4E7;</div>
+          <div class="contact-link-text"><strong>Email (Public)</strong><span>evertrustai@gmail.com</span></div>
+        </a>
+        <a href="https://github.com/evertrustai" target="_blank" class="contact-link reveal">
+          <div class="contact-link-icon">&#x2328;</div>
+          <div class="contact-link-text"><strong>GitHub</strong><span>github.com/evertrustai</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/ananthanrayananr/" target="_blank" class="contact-link reveal">
+          <div class="contact-link-icon">&#x1F4BC;</div>
+          <div class="contact-link-text"><strong>LinkedIn</strong><span>ananthanrayananr</span></div>
+        </a>
+        <a href="https://medium.com/@evertrustai" target="_blank" class="contact-link reveal">
+          <div class="contact-link-icon">&#x270D;&#xFE0F;</div>
+          <div class="contact-link-text"><strong>Medium</strong><span>medium.com/@evertrustai</span></div>
+        </a>
+        <a href="https://www.instagram.com/evertrustai/" target="_blank" class="contact-link reveal">
+          <div class="contact-link-icon">&#x1F4F8;</div>
+          <div class="contact-link-text"><strong>Instagram</strong><span>@evertrustai</span></div>
+        </a>
+        <a href="https://twitter.com/evertrustai" target="_blank" class="contact-link reveal">
+          <div class="contact-link-icon">&#x1D54F;</div>
+          <div class="contact-link-text"><strong>X / Twitter</strong><span>@evertrustai</span></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span style="color:var(--accent)">evertrustai</span> &middot; Anantha Narayanan R &middot; Alappuzha, Kerala, India &middot;
+  <span style="color:var(--muted)">Security Researcher &middot; VAPT &middot; Bug Bounty &middot; SOC &middot; SIEM &middot; 2026</span>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
-
-  </body>
+</body>
 </html>
