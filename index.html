@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anantha Narayanan R — Security Researcher</title>
-<meta name="description" content="Anantha Narayanan R — Security researcher and vulnerability researcher. 4 published CVEs, Hall of Fame at NASA, Google, Kick, Max Healthcare.">
+<meta name="description" content="Anantha Narayanan R — Security researcher and vulnerability researcher. 5 published CVEs, Hall of Fame at Apple, Microsoft, NASA, SpaceX, Google and more.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -137,17 +137,18 @@
   }
 
   /* ---- recognition ---- */
-  .rec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line)}
-  .rec{padding:28px 24px;border-right:1px solid var(--line);position:relative}
-  .rec:last-child{border-right:none}
-  .rec .n{font-family:var(--disp);font-weight:600;font-size:1.4rem;margin-bottom:4px}
-  .rec .t{font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:.04em}
-  .rec .mark{position:absolute;top:20px;right:20px;font-family:var(--mono);font-size:10px;color:var(--signal)}
+  .rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .rec{background:var(--paper);padding:26px 22px;position:relative}
+  .rec .n{font-family:var(--disp);font-weight:600;font-size:1.3rem;margin-bottom:4px;line-height:1.15}
+  .rec .t{font-family:var(--mono);font-size:10.5px;color:var(--faint);letter-spacing:.04em}
+  .rec.more .n{color:var(--signal)}
+  .rec .mark{position:absolute;top:18px;right:18px;font-family:var(--mono);font-size:10px;color:var(--signal)}
   .platforms{margin-top:28px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
   .platforms .plabel{font-family:var(--mono);font-size:11px;color:var(--faint);margin-right:6px}
   .chip{font-family:var(--mono);font-size:11.5px;padding:5px 12px;border:1px solid var(--line2);color:var(--ink2);transition:all .15s}
   .chip:hover{border-color:var(--ink);color:var(--ink)}
-  @media(max-width:720px){.rec-grid{grid-template-columns:repeat(2,1fr)}.rec:nth-child(2){border-right:none}.rec:nth-child(1),.rec:nth-child(2){border-bottom:1px solid var(--line)}}
+  .rec.fill{display:none}
+  @media(max-width:720px){.rec-grid{grid-template-columns:repeat(2,1fr)}.rec.fill{display:block}}
 
   /* ---- capabilities ---- */
   .cap-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
@@ -255,10 +256,10 @@
         <h1>Anantha<br>Narayanan <span class="light">R</span></h1>
         <div class="role">breaking things, on purpose &amp; on record</div>
         <p class="lede">
-          Independent vulnerability researcher with <strong>four published CVEs</strong> and Hall-of-Fame recognition from NASA, Google, Kick and Max Healthcare. I find the bug the author never imagined — then write it up so it triages in minutes.
+          Independent vulnerability researcher with <strong>five published CVEs</strong> and Hall-of-Fame recognition from Apple, Microsoft, NASA, SpaceX, Google and more. I find the bug the author never imagined — then write it up so it triages in minutes.
         </p>
         <div class="tickline">
-          Security researcher &nbsp;·&nbsp; VAPT &nbsp;·&nbsp; Penetration tester &nbsp;·&nbsp; <b>4&times; CVE</b> &nbsp;·&nbsp; Bug hunter &nbsp;·&nbsp; AI &nbsp;·&nbsp; MCP &nbsp;·&nbsp; IoT &nbsp;·&nbsp; CTF player
+          Security researcher &nbsp;·&nbsp; VAPT &nbsp;·&nbsp; Penetration tester &nbsp;·&nbsp; <b>5&times; CVE</b> &nbsp;·&nbsp; Bug hunter &nbsp;·&nbsp; AI &nbsp;·&nbsp; MCP &nbsp;·&nbsp; IoT &nbsp;·&nbsp; CTF player
         </div>
         <div class="cta">
           <a class="btn btn-solid" href="#contact">Get in touch →</a>
@@ -291,7 +292,7 @@
         <div class="sec-num">01 — PUBLISHED ADVISORIES</div>
         <h2 class="sec-title">CVE Research</h2>
       </div>
-      <p class="sec-note">Four assigned CVEs in PraisonAI. Two are patch bypasses — found by re-auditing fixes other hunters walked away from.</p>
+      <p class="sec-note">Five assigned CVEs: four in PraisonAI, one in Ghost CMS. Two of the PraisonAI findings are patch bypasses, found by re-auditing fixes other hunters walked away from.</p>
     </div>
 
     <div class="ledger rv">
@@ -334,8 +335,17 @@
         </div>
         <div class="sev sev-med"><div class="score">7.1</div><span class="lbl">High</span></div>
       </div>
+      <div class="cve-row">
+        <div class="cid">CVE-2026-105679<span class="sub">ghost · npm</span></div>
+        <div class="body">
+          <h3>Stored XSS via File Uploads on Local Storage</h3>
+          <p>On sites using Ghost's default local storage adapter, uploaded files were served with a content type taken from their extension. A staff user could host scripts on the site's own domain and compromise other staff admin sessions.</p>
+          <div class="patch">Credited co-reporter · Fixed in 6.64.0 · <a href="https://github.com/TryGhost/Ghost/security/advisories/GHSA-gfjp-2p8f-94qv" target="_blank" rel="noopener">GHSA-gfjp-2p8f-94qv ↗</a></div>
+        </div>
+        <div class="sev sev-high"><div class="score">7.3</div><span class="lbl">High</span></div>
+      </div>
     </div>
-    <p class="ledger-foot rv">All four patched in praisonaiagents ≥ 1.6.58 / praisonai ≥ 4.6.58.</p>
+    <p class="ledger-foot rv">PraisonAI fixes ship in praisonaiagents ≥ 1.6.58 / praisonai ≥ 4.6.58. Ghost fix ships in 6.64.0.</p>
   </div>
 </section>
 
@@ -351,10 +361,16 @@
     </div>
 
     <div class="rec-grid rv">
+      <div class="rec"><span class="mark">✦</span><div class="n">Apple</div><div class="t">Security Credit</div></div>
+      <div class="rec"><span class="mark">✦</span><div class="n">Microsoft</div><div class="t">Security Credit</div></div>
       <div class="rec"><span class="mark">✦</span><div class="n">NASA</div><div class="t">VDP Credit</div></div>
+      <div class="rec"><span class="mark">✦</span><div class="n">SpaceX</div><div class="t">Security Credit</div></div>
       <div class="rec"><span class="mark">✦</span><div class="n">Google</div><div class="t">Security Credit</div></div>
-      <div class="rec"><span class="mark">✦</span><div class="n">Kick Beta</div><div class="t">Bug Bounty</div></div>
-      <div class="rec"><span class="mark">✦</span><div class="n">Max Healthcare</div><div class="t">Security Credit</div></div>
+      <div class="rec"><span class="mark">✦</span><div class="n">New Relic</div><div class="t">Security Credit</div></div>
+      <div class="rec"><span class="mark">✦</span><div class="n">Keeper</div><div class="t">Bug Bounty Credit</div></div>
+      <div class="rec"><span class="mark">✦</span><div class="n">Kick Stream</div><div class="t">Bug Bounty Credit</div></div>
+      <div class="rec more"><span class="mark">✦</span><div class="n">20+ more</div><div class="t">Additional credits</div></div>
+      <div class="rec fill" aria-hidden="true"></div>
     </div>
 
     <div class="platforms rv">
@@ -389,7 +405,7 @@
       <div class="cap">
         <h4>Bug Bounty Hunting</h4>
         <div class="desc">Attacker-mindset, zero-noise methodology — chaining low-severity findings into high-impact stories and re-testing patches for incomplete fixes.</div>
-        <div class="kit">4 CVEs · <span>NASA · Google · Kick · Max Healthcare</span></div>
+        <div class="kit">5 CVEs · <span>28+ Hall-of-Fame credits</span></div>
       </div>
       <div class="cap">
         <h4>SOC Operations</h4>
@@ -436,12 +452,12 @@
     </div>
 
     <div class="proj-list rv">
-      <a class="proj" href="https://github.com/evertrustai/RaceBlind" target="_blank" rel="noopener">
+      <a class="proj" href="https://github.com/evertrustai/BlindHunter" target="_blank" rel="noopener">
         <div>
-          <div class="pt">RaceBlind <span class="arrow">↗</span></div>
-          <p>Smart race-condition hunting engine with HTTP/2 single-packet attacks, a Rich TUI dashboard and a Burp Suite Pro Jython bridge. Validated across 1,000+ endpoints.</p>
+          <div class="pt">BlindHunter <span class="arrow">↗</span></div>
+          <p>Privacy-first, self-hosted AI coding agent for authorized security testing. It reads and writes files and runs terminal commands to take an engagement from recon to a documented finding. Works with any OpenAI-compatible provider, Anthropic, or local models through Ollama and LM Studio — with no telemetry and a web UI bound to localhost.</p>
         </div>
-        <div class="meta">Python · HTTP/2<br>Burp Extension</div>
+        <div class="meta">TypeScript · React · Fastify<br>MIT · Open source</div>
       </a>
       <a class="proj" href="https://github.com/evertrustai/AndroAccessMaintainer" target="_blank" rel="noopener">
         <div>
@@ -504,8 +520,8 @@
           <h4>Independent Bug Bounty Hunter</h4>
           <div class="org">HackerOne · Bugcrowd · Intigriti · YesWeHack · MSRC</div>
           <ul>
-            <li>4 CVEs published in PraisonAI; two were patch bypasses</li>
-            <li>Hall of Fame: NASA, Google, Kick Beta, Max Healthcare</li>
+            <li>5 CVEs published: 4 in PraisonAI (two were patch bypasses) and 1 in Ghost CMS (stored XSS)</li>
+            <li>Hall of Fame: Apple, Microsoft, NASA, SpaceX, Google, New Relic, Keeper, Kick Stream and 20+ more</li>
             <li>Programs incl. Fireblocks, Paddle, Infomaniak, Zerodha, Shopify, T-Mobile</li>
           </ul>
         </div>
